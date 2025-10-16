@@ -16,7 +16,7 @@ const Services = () => {
       includes: [
         'Timestamped video breakdown',
         'Written analysis',
-        'One-hour strategy call', 
+        'One-hour strategy call',
         'Custom playbook'
       ],
       bestFor: 'Leaders preparing for major announcements. Anyone who knows they could have done better.',
@@ -41,7 +41,7 @@ const Services = () => {
     },
     {
       id: 'mock',
-      title: 'Mock Media Interviews', 
+      title: 'Mock Media Interviews',
       subtitle: 'Practice with Real Journalists. Real Pressure.',
       icon: FiMic,
       description: 'Custom interview scenarios matched to your event. Working journalists ask the questions. You practice the frameworks. We coach in real-time.',
@@ -95,13 +95,13 @@ const Services = () => {
       <section className="bg-gradient-to-br from-parchment to-red-50 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{opacity: 0, y: 30}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.8}}
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-red-900 mb-6">
-              Four Ways to Work Together 
+              Four Ways to Work Together
               <span className="text-red-700 block">Plus Emergency Support</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -118,10 +118,10 @@ const Services = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, delay: index * 0.1}}
+                viewport={{once: true}}
                 className={`${index % 2 === 0 ? 'bg-white' : 'bg-red-50'} p-8 rounded-2xl shadow-sm`}
               >
                 <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -135,11 +135,9 @@ const Services = () => {
                         <p className="text-lg text-red-700 font-medium">{service.subtitle}</p>
                       </div>
                     </div>
-                    
                     <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
                     <div className="mb-6">
                       <h4 className="font-semibold text-red-900 mb-3">You Get:</h4>
                       <ul className="space-y-2">
@@ -152,17 +150,14 @@ const Services = () => {
                       </ul>
                     </div>
                   </div>
-                  
                   <div className="bg-parchment p-6 rounded-lg">
                     <h4 className="font-semibold text-red-900 mb-3">Best For:</h4>
                     <p className="text-gray-700 mb-6">{service.bestFor}</p>
-                    
                     {service.commitment && (
                       <p className="text-sm text-red-700 font-medium mb-6">
                         Commitment: {service.commitment}
                       </p>
                     )}
-                    
                     <a
                       href="https://tidycal.com/jamesbrowntv/media-performance-insights-consultations"
                       target="_blank"
@@ -184,10 +179,10 @@ const Services = () => {
       <section className="py-20 bg-red-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Not Sure Which Service Fits?</h2>
             <p className="text-xl text-red-100 mb-8">

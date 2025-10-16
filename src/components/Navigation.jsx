@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, {useState} from 'react';
+import {Link, useLocation} from 'react-router-dom';
+import {motion} from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const { FiMenu, FiX } = FiIcons;
+const {FiMenu, FiX} = FiIcons;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'Philosophy', path: '/philosophy' },
-    { name: 'About', path: '/about' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Contact', path: '/contact' }
+    {name: 'Home', path: '/'},
+    {name: 'Services', path: '/services'},
+    {name: 'Philosophy', path: '/philosophy'},
+    {name: 'About', path: '/about'},
+    {name: 'FAQ', path: '/faq'},
+    {name: 'Contact', path: '/contact'}
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -72,9 +72,9 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{opacity: 0, y: -20}}
+            animate={{opacity: 1, y: 0}}
+            exit={{opacity: 0, y: -20}}
             className="md:hidden py-4 border-t border-red-100"
           >
             <div className="flex flex-col space-y-3">

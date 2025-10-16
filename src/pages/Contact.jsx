@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const {FiCalendar, FiMail, FiUsers, FiArrowRight, FiClock, FiShield, FiTrendingUp, FiPhone, FiMic} = FiIcons;
+const {FiCalendar, FiMail, FiArrowRight, FiClock, FiShield, FiTrendingUp, FiMic} = FiIcons;
 
 const Contact = () => {
   const contactMethods = [
@@ -11,24 +11,24 @@ const Contact = () => {
       title: "Schedule a Consultation",
       description: "The fastest way to determine which service fits is a twenty-minute call where we discuss your timeline, challenges, and what you need to improve.",
       icon: FiCalendar,
-      action: "Book Your Call via Tidycal",
+      action: "Book Your Call",
       link: "https://tidycal.com/jamesbrowntv/media-performance-insights-consultations",
       color: "red"
     },
     {
-      title: "Request a Specific Service",
-      description: "If you already know which service you need: Analysis, Workshop, Mock Interviews, Partnership, or Emergency Prep.",
-      icon: FiUsers,
-      action: "Contact for Specific Service",
-      link: "mailto:support@mediaperformanceinsights.com?subject=Service Request",
+      title: "Leave a Voice Message",
+      description: "Prefer to leave a voice message? Share your situation and we'll respond with a personalized plan within 24 hours.",
+      icon: FiMic,
+      action: "Record Voice Message",
+      link: "https://www.speakpipe.com/jamesbrown",
       color: "brown"
     },
     {
-      title: "Direct Contact",
+      title: "Direct Email Contact",
       description: "For general questions, media inquiries, speaking engagements, and press requests.",
       icon: FiMail,
-      action: "Send Message",
-      link: "mailto:support@mediaperformanceinsights.com",
+      action: "Send Email",
+      link: "mailto:hello@mediaperformanceinsights.com",
       color: "maroon"
     }
   ];
@@ -75,9 +75,9 @@ const Contact = () => {
       <section className="bg-gradient-to-br from-parchment to-red-50 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{opacity: 0, y: 30}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.8}}
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-red-900 mb-6">
@@ -85,7 +85,7 @@ const Contact = () => {
               <span className="text-red-700 block">Media Moment</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              You can schedule a consultation, request a specific service, or reach out directly.
+              You can schedule a consultation, leave a voice message, or reach out directly.
             </p>
           </motion.div>
         </div>
@@ -98,10 +98,10 @@ const Contact = () => {
             {contactMethods.map((method, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, delay: index * 0.1}}
+                viewport={{once: true}}
                 className="bg-white border border-red-100 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-200 text-center"
               >
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 ${getIconColorClasses(method.color)}`}>
@@ -127,10 +127,10 @@ const Contact = () => {
             {responseInfo.map((info, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, delay: index * 0.1}}
+                viewport={{once: true}}
                 className="text-center p-6"
               >
                 <div className="w-12 h-12 bg-parchment text-red-800 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -144,107 +144,14 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Direct Contact Info */}
-      <section className="py-20 bg-parchment">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-red-900 mb-6">Direct Contact</h2>
-            <div className="space-y-6 text-lg">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="w-12 h-12 bg-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                    <SafeIcon icon={FiMail} className="w-6 h-6" />
-                  </div>
-                  <p className="text-red-900 font-semibold mb-2">Email</p>
-                  <a
-                    href="mailto:support@mediaperformanceinsights.com"
-                    className="text-red-700 hover:text-red-900 font-medium"
-                  >
-                    support@mediaperformanceinsights.com
-                  </a>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="w-12 h-12 bg-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                    <SafeIcon icon={FiMic} className="w-6 h-6" />
-                  </div>
-                  <p className="text-red-900 font-semibold mb-2">Voice Message</p>
-                  <a
-                    href="https://www.speakpipe.com/jamesbrown"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-red-700 hover:text-red-900 font-medium"
-                  >
-                    Leave a Voice Message
-                  </a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Media Contact Section */}
-      <section className="py-20 bg-red-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <div className="w-16 h-16 bg-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-6">
-              <SafeIcon icon={FiPhone} className="w-8 h-8" />
-            </div>
-            <h2 className="text-3xl font-bold text-red-900 mb-6">Media Contact</h2>
-            <div className="bg-white p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
-              <p className="text-lg text-gray-700 mb-6">
-                For media inquiries, speaking engagements, podcast interviews, and press requests:
-              </p>
-              <div className="space-y-4">
-                <p className="text-red-900">
-                  <strong>Media Relations:</strong>{' '}
-                  <a
-                    href="mailto:hello@mediaperformanceinsights.com"
-                    className="text-red-700 hover:text-red-900 font-medium"
-                  >
-                    hello@mediaperformanceinsights.com
-                  </a>
-                </p>
-                <p className="text-red-900">
-                  <strong>Speaking Requests:</strong>{' '}
-                  <a
-                    href="mailto:hello@mediaperformanceinsights.com"
-                    className="text-red-700 hover:text-red-900 font-medium"
-                  >
-                    hello@mediaperformanceinsights.com
-                  </a>
-                </p>
-              </div>
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-sm text-gray-600">
-                  <strong>Response Time:</strong> Media inquiries receive priority response within 4 hours during business days, within 8 hours on weekends and holidays.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-red-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to get started?</h2>
             <p className="text-xl text-red-100 mb-8">

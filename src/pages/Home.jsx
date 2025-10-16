@@ -1,5 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+import {Link} from 'react-router-dom';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
@@ -12,7 +13,7 @@ const Home = () => {
       description: "Product launches, funding announcements, industry profiles. We help you prepare for media moments that define how people see your work."
     },
     {
-      title: "WHEN THINGS BREAK", 
+      title: "WHEN THINGS BREAK",
       description: "Crisis doesn't wait. We prep executives for pressure interviews in hours, not weeks. Day-of coaching available."
     },
     {
@@ -27,7 +28,7 @@ const Home = () => {
       description: "You + Them + Now. Land where your expertise meets what the audience actually cares about."
     },
     {
-      name: "CALM Model", 
+      name: "CALM Model",
       description: "Centering, Active Listening, Logic Over Emotion, Mindful Speaking. Stay grounded when questions turn hostile."
     },
     {
@@ -40,21 +41,6 @@ const Home = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      quote: "He turns complex material into clear, audience‑ready messages.",
-      author: "Brand manager, corporate sector"
-    },
-    {
-      quote: "Our engagement numbers rose in ways we could measure.", 
-      author: "Chief marketing officer"
-    },
-    {
-      quote: "Moved our brand ahead by leaps and bounds.",
-      author: "Program director, nonprofit"
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -62,13 +48,13 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{opacity: 0, y: 30}}
+              animate={{opacity: 1, y: 0}}
+              transition={{duration: 0.8}}
               className="text-left"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-red-900 mb-6 leading-tight">
-                Your next high-stakes interview 
+                Your next high-stakes interview
                 <span className="text-red-700 block">is coming.</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
@@ -85,12 +71,12 @@ const Home = () => {
               </a>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{opacity: 0, scale: 0.95}}
+              animate={{opacity: 1, scale: 1}}
+              transition={{duration: 0.8, delay: 0.2}}
               className="relative"
             >
-              <img 
+              <img
                 src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1753766398980-blob"
                 alt="Media Performance"
                 className="rounded-lg shadow-xl w-full h-auto"
@@ -107,10 +93,10 @@ const Home = () => {
             {valueProps.map((prop, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, delay: index * 0.1}}
+                viewport={{once: true}}
                 className="text-center p-6"
               >
                 <h3 className="text-lg font-bold text-red-900 mb-4">{prop.title}</h3>
@@ -126,10 +112,10 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{opacity: 0, x: -30}}
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 0.6}}
+              viewport={{once: true}}
             >
               <h2 className="text-4xl font-bold text-red-900 mb-6">
                 Why Smart People Stumble on Camera
@@ -141,10 +127,10 @@ const Home = () => {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{opacity: 0, x: 30}}
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 0.6}}
+              viewport={{once: true}}
               className="bg-white p-8 rounded-2xl shadow-sm"
             >
               <blockquote className="text-xl font-medium text-red-900 italic mb-4">
@@ -162,23 +148,22 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-red-900 mb-6">Four Frameworks That Fix It</h2>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {frameworks.map((framework, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, delay: index * 0.1}}
+                viewport={{once: true}}
                 className="bg-parchment p-6 rounded-lg"
               >
                 <h3 className="text-xl font-bold text-red-900 mb-3">{framework.name}</h3>
@@ -186,17 +171,14 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
-
           <div className="text-center">
-            <a
-              href="https://tidycal.com/jamesbrowntv/media-performance-insights-consultations"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/philosophy"
               className="inline-flex items-center text-red-700 font-semibold hover:text-red-900 transition-colors duration-200"
             >
               See How We Apply These
               <SafeIcon icon={FiArrowRight} className="ml-2 w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -205,10 +187,10 @@ const Home = () => {
       <section className="py-20 bg-red-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-red-900 mb-8">Why This Works</h2>
@@ -218,12 +200,10 @@ const Home = () => {
               </p>
               <div className="text-left space-y-4 text-lg text-gray-700">
                 <p>
-                  <strong>Award-winning journalist and crisis communicator.</strong> USA TODAY podcast host. NPR reporter. 
-                  Multiple AP and NYS Broadcaster Awards.
+                  <strong>Award-winning journalist and crisis communicator.</strong> USA TODAY podcast host. NPR reporter. Multiple AP and NYS Broadcaster Awards.
                 </p>
                 <p>
-                  <strong>City of Rochester Internal Communications Manager and Speechwriter.</strong> Written for mayors during crisis. 
-                  Built communication systems for ten departments.
+                  <strong>City of Rochester Internal Communications Manager and Speechwriter.</strong> Written for mayors during crisis. Built communication systems for ten departments.
                 </p>
                 <p>
                   I know what reporters want because I was one. I know what executives face because I've been in that chair at 3 AM when things go wrong.
@@ -237,67 +217,27 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Client Voices */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-red-900 mb-8">Client Voices</h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-parchment p-6 rounded-lg"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <SafeIcon key={i} icon={FiStar} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-gray-700 mb-4 italic">
-                  "{testimonial.quote}"
-                </blockquote>
-                <cite className="text-sm text-gray-600 font-medium">— {testimonial.author}</cite>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* About James */}
-      <section className="py-20 bg-red-50">
+      <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
           >
             <h2 className="text-4xl font-bold text-red-900 mb-10 text-center">About James A. Brown</h2>
-            
             <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-12">
               <div className="w-80 h-auto overflow-hidden rounded-lg shadow-xl flex-shrink-0">
-                <img 
-                  src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1753766899465-blob" 
+                <img
+                  src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1753766899465-blob"
                   alt="James A. Brown"
                   className="w-full h-auto object-cover object-center"
                 />
               </div>
               <div className="max-w-xl">
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Veteran journalist, political speechwriter, and crisis communicator.
-                  Twenty years on both sides of the camera.
+                  Veteran journalist, political speechwriter, and crisis communicator. Twenty years on both sides of the camera.
                 </p>
                 <div className="space-y-4 text-gray-700">
                   <p className="text-lg font-medium text-red-900">Three Principles:</p>
@@ -321,15 +261,15 @@ const Home = () => {
       <section className="py-20 bg-red-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Your Next Interview Matters</h2>
             <p className="text-xl text-red-100 mb-8">
               One call. One recent clip. Three specific fixes you can use immediately.<br />
-              Twenty years of  media and communictions experience. We offer adaptable systems, not generic advice.
+              Twenty years of media and communications experience. We offer adaptable systems, not generic advice.
             </p>
             <a
               href="https://tidycal.com/jamesbrowntv/media-performance-insights-consultations"
@@ -349,12 +289,17 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-gray-400">MPI © 2025 | Privacy | Terms | FAQ | 
-                <a 
-                  href="https://www.linkedin.com/in/anotherjamesbrown/" 
-                  target="_blank" 
+              <p className="text-gray-400">
+                MPI © 2025 |{' '}
+                <Link to="/faq" className="text-red-400 hover:text-red-300">
+                  FAQ
+                </Link>{' '}
+                |{' '}
+                <a
+                  href="https://www.linkedin.com/in/anotherjamesbrown/"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="text-red-400 hover:text-red-300 ml-1"
+                  className="text-red-400 hover:text-red-300"
                 >
                   LinkedIn
                 </a>

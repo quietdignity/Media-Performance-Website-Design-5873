@@ -13,7 +13,7 @@ const FAQ = () => {
       answer: "You have a big media moment in 2-8 weeks. You recently did media and know something was off. You're comfortable on camera but recognize there's another level. You want concrete feedback you can implement immediately."
     },
     {
-      category: "Workshop", 
+      category: "Workshop",
       question: "You Need the Workshop If:",
       answer: "You have multiple executives who all need the same foundation. Your leadership team's media performance is inconsistent. You want to build internal capacity and shared language. You're preparing for a roadshow, M&A announcement, or major company transition where multiple leaders will face media."
     },
@@ -63,13 +63,13 @@ const FAQ = () => {
       <section className="bg-gradient-to-br from-parchment to-red-50 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{opacity: 0, y: 30}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.8}}
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-red-900 mb-6">
-              Which Service 
+              Which Service
               <span className="text-red-700 block">Do You Need?</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -86,10 +86,10 @@ const FAQ = () => {
             {serviceQuestions.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, delay: index * 0.1}}
+                viewport={{once: true}}
                 className="bg-parchment rounded-lg p-8"
               >
                 <div className="flex items-start">
@@ -107,10 +107,10 @@ const FAQ = () => {
 
           {/* Still Not Sure */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
             className="mt-16 text-center bg-white border-2 border-red-200 rounded-lg p-8"
           >
             <h3 className="text-2xl font-bold text-red-900 mb-4">Still Not Sure?</h3>
@@ -134,23 +134,22 @@ const FAQ = () => {
       <section className="py-20 bg-red-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-red-900 mb-6">General Questions</h2>
           </motion.div>
-
           <div className="space-y-6">
             {generalFAQs.map((faq, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, delay: index * 0.1}}
+                viewport={{once: true}}
                 className="bg-white border border-red-100 rounded-lg p-6 shadow-sm"
               >
                 <h3 className="text-xl font-semibold text-red-900 mb-3">
@@ -169,10 +168,10 @@ const FAQ = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            viewport={{once: true}}
             className="text-center bg-parchment rounded-2xl p-12"
           >
             <SafeIcon icon={FiHelpCircle} className="w-16 h-16 text-red-700 mx-auto mb-6" />
@@ -181,11 +180,11 @@ const FAQ = () => {
             </h2>
             <p className="text-lg text-gray-700 mb-8">
               Email{' '}
-              <a 
-                href="mailto:support@mediaperformanceinsights.com" 
+              <a
+                href="mailto:hello@mediaperformanceinsights.com"
                 className="text-red-700 hover:text-red-800 font-medium"
               >
-                support@mediaperformanceinsights.com
+                hello@mediaperformanceinsights.com
               </a>{' '}
               and we will reply by the next business day.
             </p>
