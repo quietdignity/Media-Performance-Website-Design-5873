@@ -48,7 +48,7 @@ const Philosophy = () => {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-red-900 mb-6">
               Why This Approach 
-              <span className="text-red-700 block">Actually Works</span>
+              <span className="text-red-700 block">Works</span>
             </h1>
           </motion.div>
         </div>
@@ -117,7 +117,7 @@ const Philosophy = () => {
         </div>
       </section>
 
-      {/* What You Actually Get */}
+      {/* What We Offer */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -126,11 +126,11 @@ const Philosophy = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-red-900 mb-12 text-center">What You Actually Get</h2>
+            <h2 className="text-4xl font-bold text-red-900 mb-12 text-center">What We Offer</h2>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-parchment p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-red-900 mb-4">Real Systems, Not Theory</h3>
+                <h3 className="text-xl font-bold text-red-900 mb-4">Time tested systems</h3>
                 <p className="text-gray-700 mb-4">
                   Media Performance Workbook: 46 pages of frameworks and templates. Tough Question Response System. 
                   Competitive Positioning Scripts. Crisis Communication Timeline. 20+ storytelling structures.
@@ -181,7 +181,7 @@ const Philosophy = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-red-900 mb-8">The Real Result</h2>
+            <h2 className="text-4xl font-bold text-red-900 mb-8">Real Results</h2>
             
             <div className="space-y-6 text-lg text-gray-700 mb-12">
               <p>The frameworks that work on camera work in boardrooms, investor calls, and crisis moments.</p>

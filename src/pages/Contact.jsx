@@ -211,19 +211,19 @@ const Contact = () => {
                 <p className="text-red-900">
                   <strong>Media Relations:</strong>{' '}
                   <a
-                    href="mailto:media@mediaperformanceinsights.com"
+                    href="mailto:hello@mediaperformanceinsights.com"
                     className="text-red-700 hover:text-red-900 font-medium"
                   >
-                    media@mediaperformanceinsights.com
+                    hello@mediaperformanceinsights.com
                   </a>
                 </p>
                 <p className="text-red-900">
                   <strong>Speaking Requests:</strong>{' '}
                   <a
-                    href="mailto:speaking@mediaperformanceinsights.com"
+                    href="mailto:hello@mediaperformanceinsights.com"
                     className="text-red-700 hover:text-red-900 font-medium"
                   >
-                    speaking@mediaperformanceinsights.com
+                    hello@mediaperformanceinsights.com
                   </a>
                 </p>
               </div>

@@ -8,7 +8,7 @@ const {FiAward, FiMic, FiEdit3, FiTarget, FiArrowRight} = FiIcons;
 const About = () => {
   const experience = [
     {
-      title: "First decade in journalism",
+      title: "Journalism roots",
       details: [
         "Hosted and produced podcasts for USA TODAY",
         "Reported for NPR affiliate WXXI Public Broadcasting", 
