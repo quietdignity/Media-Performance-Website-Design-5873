@@ -1,43 +1,43 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const { FiCalendar, FiMail, FiUsers, FiArrowRight, FiClock, FiShield, FiTrendingUp } = FiIcons;
+const {FiCalendar, FiMail, FiUsers, FiArrowRight, FiClock, FiShield, FiTrendingUp, FiPhone, FiMic} = FiIcons;
 
 const Contact = () => {
   const contactMethods = [
     {
-      title: "Schedule Consultation",
-      description: "Book your strategic media performance consultation",
+      title: "Schedule a Consultation",
+      description: "The fastest way to determine which service fits is a twenty-minute call where we discuss your timeline, challenges, and what you need to improve.",
       icon: FiCalendar,
-      action: "Schedule Now",
+      action: "Book Your Call via Tidycal",
       link: "https://tidycal.com/jamesbrowntv/media-performance-insights-consultations",
       color: "red"
     },
     {
-      title: "General Inquiries",
-      description: "For general questions about services and partnerships",
-      icon: FiMail,
-      action: "Send Message",
-      link: "mailto:james@themodernfire.com",
+      title: "Request a Specific Service",
+      description: "If you already know which service you need: Analysis, Workshop, Mock Interviews, Partnership, or Emergency Prep.",
+      icon: FiUsers,
+      action: "Contact for Specific Service",
+      link: "mailto:support@mediaperformanceinsights.com?subject=Service Request",
       color: "brown"
     },
     {
-      title: "Press Contact",
-      description: "Media inquiries, speaking engagements, and press requests",
-      icon: FiUsers,
-      action: "Contact Press Team",
-      link: "mailto:press@mediaperformanceinsights.com",
+      title: "Direct Contact",
+      description: "For general questions, media inquiries, speaking engagements, and press requests.",
+      icon: FiMail,
+      action: "Send Message",
+      link: "mailto:support@mediaperformanceinsights.com",
       color: "maroon"
     }
   ];
 
-  const benefits = [
+  const responseInfo = [
     {
       icon: FiClock,
-      title: "Quick Response",
-      description: "We respond to all inquiries within one business day"
+      title: "Response Time",
+      description: "Within 2 hours on business days, within 4 hours evenings and weekends"
     },
     {
       icon: FiShield,
@@ -81,10 +81,11 @@ const Contact = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-red-900 mb-6">
-              Let's Transform Your <span className="text-red-700">Media Presence</span>
+              Let's Talk About Your Next
+              <span className="text-red-700 block">Media Moment</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Ready to turn your expertise into commanding media presence? Schedule your strategic consultation today.
+              You can schedule a consultation, request a specific service, or reach out directly.
             </p>
           </motion.div>
         </div>
@@ -93,19 +94,6 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-red-900 mb-6">Get In Touch</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Ready to transform your media presence? Choose the best way to connect with us based on your needs.
-            </p>
-          </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             {contactMethods.map((method, index) => (
               <motion.div
@@ -134,9 +122,9 @@ const Contact = () => {
             ))}
           </div>
 
-          {/* Benefits */}
+          {/* Response Info */}
           <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {responseInfo.map((info, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -146,13 +134,106 @@ const Contact = () => {
                 className="text-center p-6"
               >
                 <div className="w-12 h-12 bg-parchment text-red-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <SafeIcon icon={benefit.icon} className="w-6 h-6" />
+                  <SafeIcon icon={info.icon} className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-semibold text-red-900 mb-2">{benefit.title}</h3>
-                <p className="text-gray-700">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-red-900 mb-2">{info.title}</h3>
+                <p className="text-gray-700">{info.description}</p>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Direct Contact Info */}
+      <section className="py-20 bg-parchment">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-red-900 mb-6">Direct Contact</h2>
+            <div className="space-y-6 text-lg">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="w-12 h-12 bg-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                    <SafeIcon icon={FiMail} className="w-6 h-6" />
+                  </div>
+                  <p className="text-red-900 font-semibold mb-2">Email</p>
+                  <a
+                    href="mailto:support@mediaperformanceinsights.com"
+                    className="text-red-700 hover:text-red-900 font-medium"
+                  >
+                    support@mediaperformanceinsights.com
+                  </a>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="w-12 h-12 bg-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                    <SafeIcon icon={FiMic} className="w-6 h-6" />
+                  </div>
+                  <p className="text-red-900 font-semibold mb-2">Voice Message</p>
+                  <a
+                    href="https://www.speakpipe.com/jamesbrown"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-700 hover:text-red-900 font-medium"
+                  >
+                    Leave a Voice Message
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Media Contact Section */}
+      <section className="py-20 bg-red-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="w-16 h-16 bg-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+              <SafeIcon icon={FiPhone} className="w-8 h-8" />
+            </div>
+            <h2 className="text-3xl font-bold text-red-900 mb-6">Media Contact</h2>
+            <div className="bg-white p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 mb-6">
+                For media inquiries, speaking engagements, podcast interviews, and press requests:
+              </p>
+              <div className="space-y-4">
+                <p className="text-red-900">
+                  <strong>Media Relations:</strong>{' '}
+                  <a
+                    href="mailto:media@mediaperformanceinsights.com"
+                    className="text-red-700 hover:text-red-900 font-medium"
+                  >
+                    media@mediaperformanceinsights.com
+                  </a>
+                </p>
+                <p className="text-red-900">
+                  <strong>Speaking Requests:</strong>{' '}
+                  <a
+                    href="mailto:speaking@mediaperformanceinsights.com"
+                    className="text-red-700 hover:text-red-900 font-medium"
+                  >
+                    speaking@mediaperformanceinsights.com
+                  </a>
+                </p>
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <p className="text-sm text-gray-600">
+                  <strong>Response Time:</strong> Media inquiries receive priority response within 4 hours during business days, within 8 hours on weekends and holidays.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -179,18 +260,6 @@ const Contact = () => {
               <SafeIcon icon={FiArrowRight} className="ml-2 w-5 h-5" />
             </a>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-12 bg-parchment">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-red-900">
-            Email{' '}
-            <a href="mailto:info@mediaperformanceinsights.com" className="text-red-700 hover:text-red-900 font-medium">
-              info@mediaperformanceinsights.com
-            </a>
-          </p>
         </div>
       </section>
     </div>
